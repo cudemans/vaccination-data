@@ -1,0 +1,30 @@
+name: Scrape  # The name of your Workflow
+
+on:
+  schedule:
+    - cron: '0 21 * * *'
+    
+jobs:
+  scrape-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+      # Tells Github to run the file `scrape.py` from your repository
+      - name: Run Scraper
+        run: python scrape.py 
+        
+      - name: Commit files
+        run: |
+          git config --local user.name github-actions
+          git config --local user.email "actions@github.com"
+          git add data/*
+          git commit -am "GH ACTION Autorun $(date)"
+          git push origin main
+        env:
+          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          username: github-actions
