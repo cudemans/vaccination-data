@@ -16,4 +16,4 @@ jobs:
           python-version: '3.7'
       # Tells Github to run the file `scraper.py` from your repository
       - name: Run Scraper
-        run: python scraper.py 
+        run: python scrape.py 
