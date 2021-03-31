@@ -11,10 +11,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Set up Python
-        uses: actions/setup-python@v2.0.0
+        uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-      # Tells Github to run the file `scraper.py` from your repository
+      # Tells Github to run the file `scrape.py` from your repository
       - name: Run Scraper
         run: python scrape.py 
         
