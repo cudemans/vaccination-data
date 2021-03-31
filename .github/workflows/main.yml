@@ -1,11 +1,9 @@
 name: Scrape  # The name of your Workflow
 
 on:
-#   schedule:  # Tells Github to run this Workflow every night
-#     - cron: "23 8 * * *"
-  push:
-    branches: master
-
+  schedule:
+    - cron: '0 14 * * *'
+    
 jobs:
   scrape-latest:
     runs-on: ubuntu-latest
