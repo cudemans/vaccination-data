@@ -6,7 +6,7 @@ timestr = time.strftime("%Y%m%d")
 
 
 url_counties = "https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_county_condensed_data"
-url_country "https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_data"
+url_country = "https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_data"
 
 response = requests.get(url_counties)
 data = response.json()
