@@ -14,7 +14,9 @@ data = response.json()
 
 with open("data/cdc_data.json", "w") as outfile:
     json.dump(data, outfile)
-
+    
+with open(f"data/{timestr}_cdc_data.json", "w") as outfile2:
+    json.dump(data, outfile2)
 
 country_response = requests.get(url_country)
 country_data = country_response.json()
