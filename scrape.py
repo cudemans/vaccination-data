@@ -29,3 +29,7 @@ historical_data = response_historical.json()
 
 with open(f"data/{timestr}_us_historical.json", "w") as historical_outfile:
     json.dump(historical_data, historical_outfile)
+
+    
+with open(f"data/_us_historical.json", "w") as historical_outfile2:
+    json.dump(historical_data, historical_outfile2)
