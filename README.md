@@ -1,4 +1,4 @@
-# Vaccination scraper
+# US vaccination scraper
 
 [![Scrape](https://github.com/simprisms/vaccination-data/actions/workflows/main_get.yml/badge.svg)](https://github.com/simprisms/vaccination-data/actions/workflows/main_get.yml)
 
